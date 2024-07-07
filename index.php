@@ -132,7 +132,7 @@
         class="fotoEquipo"
         >
 
-      <div>
+      <div class="textoEquipo">
 
         <h4>
           Ana Fernández
@@ -155,7 +155,7 @@
         class="fotoEquipo"
         >
 
-      <div>
+      <div class="textoEquipo">
 
           <h4>
             Mikhail Peskov
@@ -177,7 +177,7 @@
         >
 
 
-      <div>
+      <div class="textoEquipo">
 
         <h4>
           Jonatan Sánchez
@@ -203,7 +203,7 @@
         class="fotoEquipo"
         >
 
-      <div>
+      <div class="textoEquipo">
 
         <h4>
           Jordi Julià
@@ -226,7 +226,7 @@
         class="fotoEquipo"
         >
 
-      <div>
+      <div class="textoEquipo">
 
         <h4>
           Leonardo Hernández
@@ -248,7 +248,7 @@
         class="fotoEquipo"
         >
 
-      <div>
+      <div class="textoEquipo">
 
         <h4>
           Santi Sánchez
@@ -359,7 +359,10 @@
 
 
 <?php
-    // Validar email
+
+
+// Validar email
+
 if (empty($_POST['email'])) {
       $errores[] = 'El campo email es obligatorio.';
   } else {

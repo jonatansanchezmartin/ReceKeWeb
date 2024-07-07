@@ -99,3 +99,34 @@ textarea{
     margin-right: 10px;
     border-radius: 12px;
 }
+
+
+@media (min-width: 768px) {
+
+    button{
+        width: 25%;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #imgCocina {
+        width: 50%;
+    }
+
+    #imgApp {
+        width: 30%;
+    }
+
+    .fotoEquipo{
+        width: 200px;
+    }
+
+    .textoEquipo{
+        width: 200px;
+    }
+}
