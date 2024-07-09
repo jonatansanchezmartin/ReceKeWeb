@@ -1,9 +1,35 @@
+// {
+//     "functions": {
+//       "api/**/*.php": { "runtime": "vercel-php@0.6.0" }
+//     },
+//     "routes": [
+//       { "src": "/(.*)", "dest": "/api/index.php" }
+//     ]
+//   }
+
+
 {
-    "functions": {
-      "api/**/*.php": { "runtime": "vercel-php@0.6.0" }
-    },
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.php",
+        "use": "@vercel/php"
+      },
+      {
+        "src": "formularios.php",
+        "use": "@vercel/php"
+      }
+    ],
     "routes": [
-      { "src": "/(.*)", "dest": "/api/index.php" }
+      {
+        "src": "/(.*)",
+        "dest": "index.php"
+      }
+    ],
+    "assets": [
+      {
+        "include": ["**/*.css"]
+      }
     ]
   }
 
