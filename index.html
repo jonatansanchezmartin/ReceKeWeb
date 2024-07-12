@@ -18,7 +18,7 @@
   >
 
   <img 
-    src="./media/RecekeLogo.png" 
+    src="./recekelogo.png" 
     id="logo" 
     alt="ReceKé Logo"
     >
@@ -50,7 +50,7 @@
 <section>
 
   <img 
-    src="./media/cocina.webp" 
+    src="./cocina.webp" 
     id="imgCocina"
     >
 
@@ -92,7 +92,7 @@
 </br>
 
   <img 
-    src="./media/ReceView.webp" 
+    src="./receview.webp" 
     id="imgApp"
     >
 
@@ -128,7 +128,7 @@
     <div class="filaEquipo">
 
       <img 
-        src="./media/Ana.webp" 
+        src="./ana.webp" 
         class="fotoEquipo"
         >
 
@@ -151,7 +151,7 @@
     <div class="filaEquipo">
 
       <img 
-        src="./media/Mikhail.webp" 
+        src="./mikhail.webp" 
         class="fotoEquipo"
         >
 
@@ -172,7 +172,7 @@
       <div class="filaEquipo">
 
     <img 
-        src="./media/Jon.webp" 
+        src="./jon.webp" 
         class="fotoEquipo"
         >
 
@@ -199,7 +199,7 @@
     <div class="filaEquipo">
 
       <img 
-        src="./media/Jordi.webp" 
+        src="./jordi.webp" 
         class="fotoEquipo"
         >
 
@@ -222,7 +222,7 @@
     <div class="filaEquipo">
 
       <img 
-        src="./media/Leonardo.webp" 
+        src="./leonardo.webp" 
         class="fotoEquipo"
         >
 
@@ -244,7 +244,7 @@
     <div class="filaEquipo">
 
       <img 
-        src="./media/Santi.webp" 
+        src="./santi.webp" 
         class="fotoEquipo"
         >
 
@@ -271,145 +271,85 @@
 <section>
 
   <h2>
-    ¿Quieres hablar con ReceKé?
+    ¿Quieres hablar con ReceKé? ¿Te interesa unirte a nuestro equipo?
+
   </h2>
 
-  <p>
-      ¿Te interesa unirte a nuestro equipo?
-  </p>
-
-
   <h3>Formulario de Contacto</h3>
-    <form
-      action="formularioContacto.php" 
-      action="/submit" 
-      method="post"
+  <form
+    action="https://formsubmit.co/sanchez.martin.jonatan@gmail.com" 
+    method="post"
+    >
+
+      <label 
+        for="nombre">
+          Nombre:
+      </label>
+
+      <input 
+        type="text" 
+        id="nombre" 
+        name="nombre" 
+        required>
+        
+      <br><br>
+      
+      <label 
+        for="apellidos">
+          Apellidos:
+      </label>
+
+      <input 
+        type="text" 
+        id="apellidos" 
+        name="apellidos" 
+        required
+        >
+        
+      <br><br>
+      
+      <label 
+        for="email">
+        Email:
+      </label>
+
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required
+        >
+        
+    <br><br>
+      
+      <label 
+        for="mensaje">
+          Mensaje:
+      </label>
+      
+      <br>
+
+      <textarea 
+        id="mensaje" 
+        name="mensaje" 
+        rows="4" 
+        cols="44" 
+        required
+        >
+      </textarea>
+      
+      <br><br>
+      
+      <input 
+      type="submit" 
+      value="Enviar"
+      id="botonFormulario"
       >
 
-        <label 
-          for="nombre">
-            Nombre:
-        </label>
-
-        <input 
-          type="text" 
-          id="nombre" 
-          name="nombre" 
-          required>
-          
-        <br><br>
-        
-        <label 
-          for="apellidos">
-            Apellidos:
-        </label>
-
-        <input 
-          type="text" 
-          id="apellidos" 
-          name="apellidos" 
-          required
-          >
-          
-        <br><br>
-        
-        <label 
-          for="email">
-          Email:
-        </label>
-
-        <input 
-          type="email" 
-          id="email" 
-          name="email" 
-          required
-          >
-          
-      <br><br>
-        
-        <label 
-          for="mensaje">
-            Mensaje:
-        </label>
-        
-        <br>
-
-        <textarea 
-          id="mensaje" 
-          name="mensaje" 
-          rows="4" 
-          cols="44" 
-          required
-          >
-        </textarea>
-        
-        <br><br>
-        
-        <button 
-          type="submit">
-            Enviar
-        </button>
-
-</section>
-
-
-
+    <br><br>
 
 </div>
 
 
-<?php
 
 
-// Validar email
-
-if (empty($_POST['email'])) {
-      $errores[] = 'El campo email es obligatorio.';
-  } else {
-      $email = $_POST['email'];
-      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          $errores[] = 'El formato del email no es válido.';
-      }
-  }
-
-
-  // $name = $_POST["nombre"];
-// $apellidos = $_POST["apellidos"];
-// $email = $_POST["email"];
-// $mensaje = $_POST["mensaje"];
-
-// require "vendor/autoload.php";
-
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\SMTP;
-
-// $mail = new PHPMailer(true);
-
-// $mail->isSMTP();
-// $mail->STMPAuth = true;
-
-// $mail->Host = "";
-// $mail->SMTPSecure = PHPMailer::ENCRIPTYON_STARTTLS;
-// $mail->Port = ;
-
-// $mail->Username = "";
-// $mail->password = "";
-
-
-// $mail->setFrom($email, $name, $apellidos);
-// $mail->addAddress("jonatansm@jonatansanchez.org", "Jonatan");
-
-// $mail->Subject = $subject;
-// $mail->Body = $message;
-
-
-
-// $mail->send();
-
-// echo "Email enviado"
-
-?>
-
-    
-</body>
-</html>

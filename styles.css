@@ -42,6 +42,17 @@ button{
     width: 100%;
 }
 
+#botonFormulario{
+    background-color: #D61F31;
+    color: #fefdf7;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 12px;
+    border-color: #D61F31;
+    border-style: none;
+    width: 100%;
+}
+
 hr{
     color: #A7A7A7;
     margin: 30px;
